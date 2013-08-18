@@ -60,8 +60,10 @@
 ;; A similarity function based on Euclidean distance
 (def sim-euclidean (build-sim-fn #(/ 1 (+ 1 (euclidean-distance %1 %2)))))
 
-;; A similarity function based on Pearson correlation
-(def sim-pearson (build-sim-fn correlation))
+;; A similarity function based on Pearson correlation. We scale the
+;; correlation (which is between -1 and 1) to give a value between 0
+;; and 1, so it's on the same scale as sim-euclidean.
+(def sim-pearson (build-sim-fn #(/ (+ 1 (correlation %1 %2)) 2)))
 
 ;; We use a priority map to accumulate the top n users. This is a map
 ;; sorted on value, so the first element of the map (returned by
