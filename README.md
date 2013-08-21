@@ -43,6 +43,10 @@ download links. We need the MovieLens 100k dataset:
 If possible, please download the test data before the Meetup, in case
 the pub's wi-fi is not up to the job.
 
+## Slideshow for the Dojo
+
+https://docs.google.com/presentation/d/1lA7rMdQu8uDYXMdC2Qrmogfd4Eg3oL9fHpVUkX3z_GI/edit?usp=sharing
+
 ## License
 
 Copyright © 2013 Ray Miller <ray@1729.org.uk>.
